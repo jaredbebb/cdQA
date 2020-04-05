@@ -8,7 +8,8 @@ def filter_paragraphs(
     drop_empty=True,
     read_threshold=1000,
     public_data=True,
-    min_length=50,
+    #min_length=50,
+    min_length=1,
     max_length=300,
 ):
     """
