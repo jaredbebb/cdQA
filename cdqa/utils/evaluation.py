@@ -103,6 +103,7 @@ def evaluate(dataset, predictions, unique_pred=True):
 
     exact_match = 100.0 * exact_match / total
     f1 = 100.0 * f1 / total
+    print("total qa:",total)
 
     return {"exact_match": exact_match, "f1": f1}
 

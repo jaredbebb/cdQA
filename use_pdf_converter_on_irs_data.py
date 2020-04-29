@@ -1,32 +1,51 @@
+import os
 import pandas as pd
 from ast import literal_eval
 
+from cdqa.utils.converters import pdf_converter
 from cdqa.utils.filters import filter_paragraphs
-from cdqa.utils.download import download_model, download_bnpp_data
-from cdqa.pipeline.cdqa_sklearn import QAPipeline
+from cdqa.pipeline import QAPipeline
+from cdqa.utils.download import download_model
 
-# Download data and models
-download_bnpp_data(dir='./data/bnpp_newsroom_v1.1/')
+# Download model
 # download_model(model='bert-squad_1.1', dir='./models')
 
-# Loading data and filtering / preprocessing the documents
-# df = pd.read_csv('data/bnpp_newsroom_v1.1/bnpp_newsroom-v1.1.csv', converters={'paragraphs': literal_eval})
-df = pd.read_csv('data/bnpp_newsroom_v1.1/custom_tax_jlb.csv', converters={'paragraphs': literal_eval})
-df = filter_paragraphs(df)
+# Download pdf files from BNP Paribas public news
+def download_pdf():
+    import os
+    import wget
+    directory = './data/pdf/'
+    models_url = [
+      'https://invest.bnpparibas.com/documents/1q19-pr-12648',
+      'https://invest.bnpparibas.com/documents/4q18-pr-18000',
+      'https://invest.bnpparibas.com/documents/4q17-pr'
+    ]
 
-# Loading QAPipeline with CPU version of BERT Reader pretrained on SQuAD 1.1
-# cdqa_pipeline = QAPipeline(reader='models/bert_qa_vCPU-sklearn.joblib')
-cdqa_pipeline = QAPipeline(reader='models/bert_qa.joblib')
+    print('\nDownloading PDF files...')
 
-# Fitting the retriever to the list of documents in the dataframe
-# cdqa_pipeline.fit_retriever(X=df)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    for url in models_url:
+        wget.download(url=url, out=directory)
+
+
+# download_pdf()
+
+# Convert the pdf files into a dataframe
+df = pdf_converter(directory_path='./data/pdf/')
+print(df.head())
+print("pdf files converted")
+
+# Instantiate cdQA pipeline from model
+cdqa_pipeline = QAPipeline(reader='./models/bert_qa.joblib', max_df=1.0)
+# cdqa_pipeline = QAPipeline(reader='models/bert_qa.joblib')
+
+# Fit Retriever to documents
 cdqa_pipeline.fit_retriever(df=df)
 
-# Sending a question to the pipeline and getting prediction
-# query = 'Since when does the Excellence Program of BNP Paribas exist?'
-# query = 'Who should investors  consult with prior to investing?'
-# query = 'Who do custom animal farmers need to consult with before buying fertilizer?'
-queries = [
+# execute a query
+# query = 'How many contracts did BNP Paribas Cardif sell in 2019?'
+questions = [
     'Who do custom animal farmers need to consult with before buying fertilizer?',
     'do I qualify for an automatic extension of time to file without filing Form 4868?',
     'Did the coronavirus pandemic extend the deadline to pay taxes?',
@@ -42,12 +61,11 @@ queries = [
     'Why is the IRS is asking me for financial information so that I can get economic impact relief?',
     "Why is the IRS calling  me asking to verify financial information?"
 ]
-# prediction = cdqa_pipeline.predict(X=query)
-for query in queries:
-    prediction = cdqa_pipeline.predict(query)
+for question in questions:
+    prediction = cdqa_pipeline.predict(question)
     print()
     print('------------------------------------------------------------------------')
-    print('query: {}'.format(query))
+    print('question: {}'.format(question))
     print('answer: {}\n'.format(prediction[0]))
     print('title: {}\n'.format(prediction[1]))
     print('paragraph: {}\n'.format(prediction[2]))
