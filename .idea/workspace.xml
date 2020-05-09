@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="480252ab-4666-4726-92a9-15e1c28a539c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/define_npmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/write_npmi_training_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npmi_example.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/npmi_example.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="phraser_util.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phraser_util.py">
+      <file leaf-file-name="npmi_example.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/npmi_example.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trainer_reader_on_irs_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer_reader_on_irs_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="17">
+              <caret line="1" column="12" lean-forward="true" selection-end-line="71" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_reader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train_reader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bertqa_sklearn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdqa/reader/bertqa_sklearn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="1341" column="53" selection-start-line="1341" selection-start-column="44" selection-end-line="1341" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -46,12 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>processor_train</find>
-      <find>Bertprocessor</find>
-      <find>json</find>
-      <find>squad</find>
-      <find>pdf</find>
-      <find>qapip</find>
       <find>annotat</find>
       <find>evaluate_pip</find>
       <find>evaluate_reader</find>
@@ -76,6 +98,12 @@
       <find>return examples</find>
       <find>cleaned</find>
       <find>entry</find>
+      <find>FusedAdam</find>
+      <find>optimizer_grouped_parameters</find>
+      <find>named_parameters</find>
+      <find>self.model</find>
+      <find>loss</find>
+      <find>adam</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,10 +142,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="52" />
+    <option name="y" value="-20" />
+    <option name="width" value="1934" />
+    <option name="height" value="1011" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -127,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,11 +163,15 @@
               <item name="cdQA" type="b2602c69:ProjectViewProjectNode" />
               <item name="cdQA" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cdQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cdQA" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,22 +379,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3379531" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3347413" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21458334" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.14114584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4213305" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainer_reader_on_irs_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" lean-forward="true" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cdqa/utils/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="862">
@@ -689,13 +714,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://D:/Anaconda3/envs/cdQA/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -715,16 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="16" column="93" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tutorial-first-steps-cdqa.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
         </state>
       </provider>
     </entry>
@@ -755,20 +764,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/phraser_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer_reader_on_irs_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" lean-forward="true" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train_reader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/tutorial-first-steps-cdqa.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cdqa/reader/bertqa_sklearn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="54" selection-start-line="54" selection-end-line="99" />
+        <state relative-caret-position="288">
+          <caret line="1341" column="53" selection-start-line="1341" selection-start-column="44" selection-end-line="1341" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -776,13 +806,6 @@
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phraser_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
